@@ -1,0 +1,99 @@
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+
+  .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-item {
+    margin-bottom: 10px;
+  }
+
+  .form-item label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .form-item input[type="number"],
+  .form-item select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .form-button {
+    margin-top: 20px;
+    text-align: right;
+  }
+
+  .form-button input[type="reset"],
+  .form-button input[type="submit"] {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .form-button input[type="reset"]:hover,
+  .form-button input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  .result {
+    margin-top: 20px;
+    font-weight: bold;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+</style>
+
+<div class="form-container">
+  <form method="get" onsubmit="return calculateBMR(event)">
+    <div class="form-item">
+      <label for="weightInput">體重（公斤）：</label>
+      <input type="number" name="weight" id="weightInput" required />
+    </div>
+    <div class="form-item">
+      <label for="heightInput">身高（公分）：</label>
+      <input type="number" name="height" id="heightInput" required />
+    </div>
+    <div class="form-item">
+      <label for="ageInput">年齡（歲）：</label>
+      <input type="number" name="age" id="ageInput" required />
+    </div>
+    <div class="form-item">
+      <label for="genderSelect">性別：</label>
+      <select name="gender" id="genderSelect" required>
+        <option value="">請選擇</option>
+        <option value="male">男性</option>
+        <option value="female">女性</option>
+      </select>
+    </div>
+    <div class="form-button">
+      <input type="reset" value="重設" />
+      <input type="submit" value="計算" />
+    </div>
+  </form>
+
+  <div class="result" id="resultContainer" style="display: none;"></div>
+</div>
+
+<script>
+  // 請將 JavaScript 部分的程式碼保持不變
+</script>
